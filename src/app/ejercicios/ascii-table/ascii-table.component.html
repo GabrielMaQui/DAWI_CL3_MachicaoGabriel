@@ -1,0 +1,22 @@
+<h1>Lista de la tabla ASCII</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Código</th>
+      <th scope="col">Caracter</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    @for (asciichar of asciiChars; track $index) {
+
+        <tr class="table-success">
+          <td>{{asciichar.code}}</td>
+          <td>{{asciichar.character}}</td>
+
+        </tr>
+<!--@switch (alumno.nota) {}-->
+
+    }
+  </tbody>
+</table>
