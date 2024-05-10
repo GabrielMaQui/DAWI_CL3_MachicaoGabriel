@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">
+    Calculadora de Llamadas por minutos
+  </div>
+  <div class="card-body">
+    <div class="mb-3">
+      <label for="txttelefono" class="form-label">Ingrese el número de telefono:</label>
+      <input type="number" class="form-control"
+      [(ngModel)]="planCelular.numero"
+      id="txttelefono" placeholder="#########">
+    </div>
+    <div class="mb-3">
+      <label for="txtminutos" class="form-label">Ingrese la cantidad de tiempo de la llamada (Minutos):</label>
+      <input type="number" class="form-control"
+      [(ngModel)]="planCelular.minutos"
+      id="txtminutos" placeholder="1" min="1">
+    </div>
+    <hr />
+    @if (mostrarMensaje) {
+      <div class="alert alert-primary" role="alert">
+        Costo total de la llamada: {{planCelular.costo}}
+      </div>
+    }
+    <button type="button"(click)="calcularCosto()" class="btn btn-primary">Calcular</button>
+  </div>
+</div>
