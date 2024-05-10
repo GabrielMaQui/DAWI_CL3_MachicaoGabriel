@@ -1,1 +1,28 @@
-<p>edades works!</p>
+<div class="card">
+  <div class="card-header">
+    Calculadora de edades
+  </div>
+  <div class="card-body">
+    <div class="mb-3">
+      <label for="txtedad1" class="form-label">Ingrese la edad de la primera persona</label>
+      <input type="number" class="form-control" step="0.1"
+      [(ngModel)]="edades.edad1"
+      id="txtedad1" placeholder="0 - 120" min="0" max="120">
+    </div>
+    <div class="mb-3">
+      <label for="txtedad2" class="form-label">Ingrese la edad de la segunda persona</label>
+      <input type="number" class="form-control" step="0.1"
+      [(ngModel)]="edades.edad2"
+      id="txtedad2" placeholder="0 - 120" min="0" max="120">
+    </div>
+    <hr />
+    @if (mostrarMensaje) {
+      <div class="alert alert-primary" role="alert">
+        {{edades.edadMayor}}, la diferencia de edades es: {{edades.diferencia}}
+      </div>
+    }
+    <button type="button"(click)="calcularDiferencia()" class="btn btn-primary">Calcular</button>
+
+  </div>
+</div>
+
