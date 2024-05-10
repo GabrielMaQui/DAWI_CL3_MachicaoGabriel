@@ -8,14 +8,14 @@
     </tr>
   </thead>
   <tbody>
-    @for (asciichar of asciiChars; track $index) {
+    @for (asciichar of asciiCaracteresSolicitados; track $index) {
 
         <tr class="table-success">
           <td>{{asciichar.code}}</td>
-          <td>{{asciichar.character}}</td>
+          <td>{{asciichar.caracter}}</td>
 
         </tr>
-<!--@switch (alumno.nota) {}-->
+
 
     }
   </tbody>
