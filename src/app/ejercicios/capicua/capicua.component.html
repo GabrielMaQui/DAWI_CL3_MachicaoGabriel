@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-header">
+    Verificador de números Capicua
+  </div>
+  <div class="card-body">
+    <div class="mb-3">
+      <label for="txtnumero" class="form-label">Ingrese el número</label>
+      <input type="number" class="form-control"
+      [(ngModel)]="capicua.numero"
+      id="txtnumero" placeholder="10 - 99" pattern="^[1-9][0-9]$" minlength="2" maxlength="2">
+    </div>
+    <hr />
+
+    @if(mostrarError){
+      <div class="alert alert-danger" role="alert">
+        {{capicua.error}}
+      </div>
+    }
+    @if (mostrarMensaje) {
+      <div class="alert alert-primary" role="alert">
+        {{capicua.resultado}}
+      </div>
+    }
+
+
+    <button type="button"(click)="verificarCapicua()" class="btn btn-primary">Calcular</button>
+  </div>
+</div>
