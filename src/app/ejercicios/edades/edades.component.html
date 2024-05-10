@@ -16,6 +16,12 @@
       id="txtedad2" placeholder="0 - 120" min="0" max="120">
     </div>
     <hr />
+
+    @if(mostrarError){
+      <div class="alert alert-danger" role="alert">
+        {{edades.error}}
+      </div>
+    }
     @if (mostrarMensaje) {
       <div class="alert alert-primary" role="alert">
         {{edades.edadMayor}}, la diferencia de edades es: {{edades.diferencia}}
